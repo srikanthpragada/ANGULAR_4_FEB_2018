@@ -1,0 +1,26 @@
+
+<div  [hidden]="hide">This is DIV</div>
+
+<div *ngIf="discount">
+    50% Flat Discount
+</div>
+
+<h2 *ngIf="discount; else nodiscount"> Discount 50% </h2>
+<ng-template #nodiscount><h3>Fresh Stock</h3></ng-template>
+
+
+<div  *ngFor="let n of [10,20,30];let evenRow=even; let firstRow=first; let lastRow=last">
+     <hr *ngIf="firstRow"/>
+     <div [style.color]="evenRow ? 'red' : 'green'">{{n}}</div>
+     <hr *ngIf="lastRow"/>
+</div>
+
+
+<div [ngSwitch]="timing">
+     <h1 *ngSwitchCase="'m'">Morning </h1>
+     <h1 *ngSwitchCase="'a'">Afternoon </h1>
+     <h1 *ngSwitchDefault>Evening</h1>
+</div>     
+
+
+<div  (mousemove)="showMouse($event)">Move your mouse here!</div>

@@ -1,0 +1,18 @@
+<h1>{{ title }}</h1>
+<h2>By {{trainer}}</h2>
+<img src="assets/{{trainerImage}}"  width="100px" height="100px"  alt="{{trainer}}" />
+
+
+<h3>Topics</h3>
+<ul>
+    <li *ngFor="let topic of topics;let i=index"> 
+         {{ topic.toUpperCase() }}  
+         <button (click)="deleteTopic(i)">Delete</button>
+    </li>
+</ul>
+
+<h4>Add Topic</h4>
+Topic <input type="text"  #topic/>
+<button (click)="addTopic(topic.value)">Add Topic</button>
+
+

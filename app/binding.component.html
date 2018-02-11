@@ -1,0 +1,13 @@
+
+<div  [class.bright]="bright"    [class.big]="isBig" >This is some text!</div>
+
+<input (click)="1==1" type="checkbox"  #discount>Apply Discount 
+
+<div *ngFor="let p of products">
+    <h2 [ngClass]="{'big':true, 'bright': discount.checked }"> {{ p.name }} </h2>
+    <h3 [class.bright]="p.price > 50000"  [class.cheap]="p.price < 20000"  >
+         {{ discount.checked ? p.price * 0.90 : p.price  }}
+     </h3>
+</div>
+
+
