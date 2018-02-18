@@ -1,17 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { PipesDemoComponent } from './pipes/pipesdemo.component';
-import { BracketsPipe } from './pipes/brackets.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveLoginComponent } from './forms/reactive-login.component';
 
 
 @NgModule({
   declarations: [
-     PipesDemoComponent, BracketsPipe
+     ReactiveLoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,ReactiveFormsModule
   ],
-  providers: [],
-  bootstrap: [PipesDemoComponent  ]
+  providers: [ ],
+  bootstrap: [ReactiveLoginComponent]
 })
 export class AppModule { }
