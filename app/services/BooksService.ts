@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { WebBook } from 'app/http/Webbook';
+import { WebBook } from '../http/Webbook';
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import {Observable} from 'rxjs';
 
